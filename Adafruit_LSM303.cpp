@@ -23,7 +23,7 @@ bool Adafruit_LSM303::begin()
 
   // Enable the accelerometer
   write8(LSM303_ADDRESS_ACCEL, LSM303_REGISTER_ACCEL_CTRL_REG1_A, 0x27);
-  
+  write8(LSM303_ADDRESS_ACCEL,LSM303_REGISTER_ACCEL_CTRL_REG4_A ,0b00011000);
   // Enable the magnetometer
   write8(LSM303_ADDRESS_MAG, LSM303_REGISTER_MAG_MR_REG_M, 0x00);
 
